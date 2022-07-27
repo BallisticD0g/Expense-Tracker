@@ -29,7 +29,6 @@ export class Tab1Page {
       const addRoundDec = Math.floor(addDec * 10) / 10;
       this.percentage = this.percentage + addRoundDec * 100;
       this.prog = this.prog + addRoundDec;
-
       console.log('AddDec', addDec);
       console.log('AddDecRound', addRoundDec);
       console.log('AddPer', this.percentage);
