@@ -13,26 +13,28 @@
     </ion-toolbar>
   </ion-header>
   <ion-body class="body">
+    
     <!-- Display dollar amount spending and Percentage -->
     <div class="container">
-      <ion-li class="total">$100000</ion-li>
-
+      <ion-label class="total">${{newNum}}</ion-label>
       <ion-item class="percentage">%</ion-item>
-
     </div>
+   
     <!-- Progrss Bar -->
     <div class="pbcon">
       <ion-progress-bar id="PB" color="warning" value="1"></ion-progress-bar>
     </div>
 
+    <!-- Input field-->
     <div class="input-con"> 
-      <ion-input id="txtinput" autofocus="true" type="number" [{nglModel}]="numbInput" max="999999" min="1" placeholder="Enter Here" ></ion-input>
+      <ion-input id="txtinput" autofocus="true" type="number" [(ngModel)]="numbInput" max="999999" min="1" placeholder="Enter Here"></ion-input>
     </div>
 
+    <!-- Buttons -->
     <div class="bttcon">
-      <ion-button class="btt" color="warning"><ion-icon name="refresh-outline" size="large" (click)="btnNew()"></ion-icon></ion-button>
-      <ion-button class="btt" color="warning"><ion-icon name="add-outline" size="large"></ion-icon></ion-button>
-      <ion-button class="btt" color="warning"><ion-icon name="remove-outline" size="large"></ion-icon></ion-button>
+      <ion-button class="btt" color="warning" (click)="btnNew()"><ion-icon name="refresh-outline" size="large" ></ion-icon></ion-button>
+      <ion-button class="btt" color="warning" (click)="btnAdd()"><ion-icon name="add-outline" size="large"></ion-icon></ion-button>
+      <ion-button class="btt" color="warning" (click)="btnMin()"><ion-icon name="remove-outline" size="large"></ion-icon></ion-button>
     </div>
    
 

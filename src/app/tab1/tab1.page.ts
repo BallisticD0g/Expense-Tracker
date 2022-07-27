@@ -6,11 +6,20 @@ import { Component } from '@angular/core';
   styleUrls: ['tab1.page.scss']
 })
 export class Tab1Page {
-  numberInput;
+  numbInput;
+  newNum;
   constructor() {}
 
   btnNew(){
+    this.newNum = this.numbInput;
+  }
 
+  btnAdd(){
+    this.newNum = this.numbInput + this.newNum;
+  }
+
+  btnMin(){
+    this.newNum = this.newNum - this.numbInput;
   }
 
 }
