@@ -5,7 +5,7 @@
     {
       "files": ["*.ts"],
       "parserOptions": {
-        "project": ["expense-tracker/tsconfig.json"],
+        "project": ["tsconfig.json"],
         "tsconfigRootDir": ".",
         "createDefaultProgram": true
       },
