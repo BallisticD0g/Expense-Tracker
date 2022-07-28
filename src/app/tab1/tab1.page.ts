@@ -41,13 +41,12 @@ export class Tab1Page {
      //calculate the decamal value then round it for use.
     const dec = this.numbInput / this.newNum;
     const roundDec = Math.floor(dec * 10) / 10;
-    //substacts from percentage amount
     this.prog = this.prog - roundDec;
-    //calculatet the percentage
-    this.percentage = this.prog * 100;
+    this.percentage = Math.round(this.prog * 100);
     this.newNum = this.newNum - this.numbInput;
     console.log('SUbDec', roundDec);
     console.log('SUBPer', this.percentage);
+    console.log('SUBProg', this.prog);
   }
 
 
