@@ -40,7 +40,8 @@ export class Tab1Page {
     //substacts from dollar amount
      //calculate the decamal value then round it for use.
     const dec = this.numbInput / this.newNum;
-    const roundDec = Math.floor(dec * 10) / 10;
+    const roundDec = parseFloat(dec.toFixed(2));
+
     this.prog = this.prog - roundDec;
     this.percentage = Math.round(this.prog * 100);
     this.newNum = this.newNum - this.numbInput;

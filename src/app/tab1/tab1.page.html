@@ -8,8 +8,8 @@
     
     <!-- Display dollar amount spending and Percentage -->
     <div class="container">
-      <ion-label class="total">${{newNum}}</ion-label>
-      <ion-label class="percentage">%{{percentage}}</ion-label>
+      <ion-label class="total" >${{newNum}}</ion-label>
+      <ion-label class="percentage" min="0" max="3">%{{percentage}}</ion-label>
     </div>
    
     <!-- Progrss Bar -->
@@ -19,7 +19,7 @@
 
     <!-- Input field-->
     <div class="input-con"> 
-      <ion-input id="txtinput" autofocus="true" type="number" [(ngModel)]="numbInput" max="999999" min="1" placeholder="Enter Here"></ion-input>
+      <ion-input id="txtinput" autofocus="true" type="number" onKeyPress="if(this.value.length==4) return false" [(ngModel)]="numbInput"  placeholder="Enter Here"></ion-input>
     </div>
 
     <!-- Buttons -->
